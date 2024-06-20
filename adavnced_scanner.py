@@ -37,3 +37,5 @@ def connScan(tgthost,tgtport):
                             portScan(tgtHost,tgtports)
                             if__name__=='__main__'
                             main()
+        # this is network scanner in which in which the there is specialised help otion to tell about how 
+        # to put input in the the input
