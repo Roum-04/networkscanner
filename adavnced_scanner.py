@@ -27,7 +27,7 @@ def connScan(tgthost,tgtport):
                     def main():
                         parser=optparse.optionparser('usage of the program :'+' -H <target host> -p<target port>')
                         parser.add_option('-H',dest='tgtHost',type='String',help='specifing target host')
-                        parser.add_option('-p',dest='tgtHost',type='String',help='specifing target port separted by comma')
+                        parser.add_option('-p',dest='tgtHost',type='String',help='specifing target port separated by comma')
                         (options,args)=parser.parse_args()
                         tgtHost=options.tgtHost
                         tgtports= str(options.tgtport).spilt(',')
@@ -37,5 +37,16 @@ def connScan(tgthost,tgtport):
                             portScan(tgtHost,tgtports)
                             if__name__=='__main__'
                             main()
-        # this is network scanner in which in which the there is specialised help otion to tell about how 
-        # to put input in the the input
+
+
+
+
+
+  # 1> this is basically a advanced port scanner in which there are three library in which socket is used to scan the port and optprase is used
+  # to give option to for the input and threading library is used to execute multiple thread in the scanner.
+  # 2> In main function we specify the optparse library in which we use a method called as optionparser which is used to  give option when the user enter
+  # wrong option and add_option is used to add argument in the option.
+  # 3> if(tgthost == None)|(tgtports[0]== None): is used to specify if the user give nothing then pass parser.usage
+  # 4> def portscan(tgthost,tgtports): in this method we specify if the user give input in domain name then output will be produced
+  # 5> gethostbyname and  gethostbyaddr are used to get input of host  in domain name and ip address               
+  # 6> def connScan(tgthost,tgtport): this method is used to scan and give output                
